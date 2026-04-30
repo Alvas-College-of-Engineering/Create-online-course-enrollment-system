@@ -1,0 +1,232 @@
+========================================
+ONLINE COURSE ENROLLMENT SYSTEM
+SETUP AND DEPLOYMENT GUIDE
+========================================
+Student: JOSNA FERNANDES (4AL23CS056)
+
+========================================
+PREREQUISITES
+========================================
+1. JDK 11 or higher
+2. Apache Tomcat 10.x
+3. MySQL 8.x
+4. MySQL Connector/J JAR file
+
+========================================
+STEP 1: DATABASE SETUP
+========================================
+1. Install MySQL and start the service
+2. Open MySQL command line or workbench
+3. Run these commands:
+   
+   CREATE DATABASE course_enrollment;
+   USE course_enrollment;
+   
+4. Execute the SQL from database/sample_data.sql file
+
+========================================
+STEP 2: CONFIGURE DATABASE CONNECTION
+========================================
+1. Open: src/database/DatabaseConnection.java
+2. Update these lines with your MySQL credentials:
+   
+   private static final String DB_URL = "jdbc:mysql://localhost:3306/course_enrollment";
+   private static final String DB_USER = "root";
+   private static final String DB_PASSWORD = "your_password_here";
+
+========================================
+STEP 3: COMPILE THE PROJECT
+========================================
+1. Download MySQL Connector/J JAR and place in lib/ folder
+2. Create build directory:
+   mkdir build
+
+3. Compile all Java files:
+   javac -cp "lib/mysql-connector-java-8.0.xx.jar" -d build src/**/*.java
+
+   For Windows:
+   javac -cp "lib\mysql-connector-java-8.0.xx.jar" -d build src\database\*.java src\models\*.java src\servlets\*.java src\admin\*.java
+
+========================================
+STEP 4: DEPLOY TO TOMCAT
+========================================
+1. Create deployment structure:
+   enrollment/
+   ├── WEB-INF/
+   │   ├── classes/
+   │   ├── lib/
+   │   └── web.xml
+   ├── index.jsp
+   ├── courses.jsp
+   ├── enroll.jsp
+   └── myEnrollments.jsp
+
+2. Copy files:
+   - Copy build/* to enrollment/WEB-INF/classes/
+   - Copy web/WEB-INF/web.xml to enrollment/WEB-INF/
+   - Copy web/*.jsp to enrollment/
+   - Copy MySQL Connector JAR to enrollment/WEB-INF/lib/
+
+3. Deploy to Tomcat:
+   - Copy enrollment folder to TOMCAT_HOME/webapps/
+
+4. Start Tomcat:
+   - Windows: TOMCAT_HOME/bin/startup.bat
+   - Linux/Mac: TOMCAT_HOME/bin/startup.sh
+
+========================================
+STEP 5: ACCESS THE APPLICATION
+========================================
+Web Interface (Student Portal):
+URL: http://localhost:8080/enrollment/
+
+Features:
+- View available courses
+- Enroll in courses
+- View personal enrollments
+
+Test with Student ID: 4AL23CS056
+
+========================================
+STEP 6: RUN ADMIN PANEL (SWING)
+========================================
+From project root directory:
+
+java -cp "build;lib/mysql-connector-java-8.0.xx.jar" admin.AdminPanel
+
+For Linux/Mac:
+java -cp "build:lib/mysql-connector-java-8.0.xx.jar" admin.AdminPanel
+
+Features:
+- Add new courses
+- Add new students
+- View all records
+- Refresh data
+
+========================================
+TESTING THE APPLICATION
+========================================
+1. Open browser: http://localhost:8080/enrollment/
+2. Click "View Available Courses"
+3. Select any course and click "Enroll Now"
+4. Enter Student ID: 4AL23CS056
+5. Click "Confirm Enrollment"
+6. Go back to home and click "View My Enrollments"
+7. Enter Student ID: 4AL23CS056
+8. Verify enrollment appears
+
+========================================
+SAMPLE DATA INCLUDED
+========================================
+Students:
+- 4AL23CS056 - JOSNA FERNANDES (Semester 5, CS)
+- 4AL23CS001 - Rahul Kumar (Semester 3, CS)
+- 4AL23CS002 - Priya Sharma (Semester 4, CS)
+- 4AL23EC001 - Amit Patel (Semester 2, EC)
+- 4AL23ME001 - Sneha Reddy (Semester 6, ME)
+
+Courses:
+- CS501 - Advanced Java Programming
+- CS502 - Database Management Systems
+- CS503 - Web Technologies
+- CS504 - Data Structures and Algorithms
+- CS505 - Machine Learning Basics
+- CS506 - Mobile Application Development
+- CS507 - Cloud Computing
+- CS508 - Artificial Intelligence
+
+========================================
+TROUBLESHOOTING
+========================================
+1. Port 8080 already in use:
+   - Change Tomcat port in server.xml
+   - Or stop other services using port 8080
+
+2. Database connection error:
+   - Verify MySQL is running
+   - Check credentials in DatabaseConnection.java
+   - Ensure database exists
+
+3. ClassNotFoundException:
+   - Verify MySQL Connector JAR is in WEB-INF/lib/
+   - Check CLASSPATH includes the JAR
+
+4. Servlet not found:
+   - Verify web.xml is in WEB-INF/
+   - Check servlet mapping is correct
+   - Restart Tomcat
+
+5. JSP compilation error:
+   - Check JSP syntax
+   - Verify imports are correct
+   - Clear Tomcat work directory
+
+========================================
+CONCEPTS DEMONSTRATED
+========================================
+Module 1 - Collections:
+✓ HashMap for student/course storage
+✓ ArrayList for enrollments
+✓ Comparable interface
+✓ Collections.sort()
+
+Module 2 - String Handling:
+✓ String operations
+✓ String formatting
+✓ valueOf() conversions
+
+Module 3 - Swing:
+✓ JFrame, JPanel, JTable
+✓ JDialog for forms
+✓ Event handling
+✓ MVC pattern
+
+Module 4 - Servlets & JSP:
+✓ Servlet lifecycle
+✓ doGet/doPost methods
+✓ Request/Response handling
+✓ Session tracking
+✓ JSP expressions
+
+Module 5 - JDBC:
+✓ Connection management
+✓ PreparedStatement
+✓ ResultSet
+✓ Transaction handling
+✓ Exception handling
+
+========================================
+PROJECT STRUCTURE
+========================================
+src/
+├── database/
+│   └── DatabaseConnection.java
+├── models/
+│   ├── Student.java
+│   ├── Course.java
+│   ├── Enrollment.java
+│   └── EnrollmentManager.java
+├── servlets/
+│   └── EnrollmentServlet.java
+└── admin/
+    └── AdminPanel.java
+
+web/
+├── WEB-INF/
+│   └── web.xml
+├── index.jsp
+├── courses.jsp
+├── enroll.jsp
+└── myEnrollments.jsp
+
+database/
+└── sample_data.sql
+
+========================================
+CONTACT
+========================================
+Student: JOSNA FERNANDES
+ID: 4AL23CS056
+Course: Advanced Java Programming
+
+========================================
