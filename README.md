@@ -5,7 +5,7 @@ A comprehensive web-based course enrollment system built with Java, demonstratin
 [![Java](https://img.shields.io/badge/Java-11+-orange.svg)](https://www.oracle.com/java/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## � Table of Contentst
+## 📑 Table of Contents
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
