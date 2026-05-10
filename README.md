@@ -19,7 +19,6 @@ A comprehensive web-based course enrollment system built with Java, demonstratin
 - [Database Schema](#database-schema)
 - [API Endpoints](#api-endpoints)
 - [Contributing](#contributing)
-- [License](#license)
 - [Author](#author)
 
 ## ✨ Features
@@ -493,23 +492,15 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👤 Author
 
 **JOSNA FERNANDES**
 - Student ID: 4AL23CS056
 - Course: Advanced Java Programming
-- Institution: [Your Institution Name]
+- Institution: Alva's Institute of Engineering and Technology
 
-## 🙏 Acknowledgments
 
-- Java Documentation - [Oracle Java Docs](https://docs.oracle.com/en/java/)
-- Servlet & JSP Tutorial - [Jakarta EE](https://jakarta.ee/)
-- MySQL Documentation - [MySQL Docs](https://dev.mysql.com/doc/)
-- H2 Database - [H2 Database Engine](https://www.h2database.com/)
 
 ## 📞 Support
 
