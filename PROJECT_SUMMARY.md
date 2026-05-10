@@ -299,14 +299,6 @@ Potential additions for v2.0:
 3. Review code structure in `src/` directory
 4. Extend functionality as needed
 
----
-
-## 📞 Support & Contact
-
-**Student**: JOSNA FERNANDES  
-**Student ID**: 4AL23CS056  
-**Email**: josna.fernandes@example.com  
-**GitHub**: [Your GitHub Profile]
 
 ---
 
@@ -325,15 +317,7 @@ Potential additions for v2.0:
 
 ---
 
-## 📝 Quick Links
 
-- **Main Documentation**: [README.md](README.md)
-- **Technical Details**: [details.md](details.md)
-- **Setup Guide**: [SETUP_GUIDE.txt](SETUP_GUIDE.txt)
-- **Quick Start**: [QUICK_START.md](QUICK_START.md)
-- **Upload Guide**: [GITHUB_UPLOAD_CHECKLIST.md](GITHUB_UPLOAD_CHECKLIST.md)
-
----
 
 ## 🎉 Conclusion
 
@@ -345,10 +329,4 @@ This project successfully demonstrates:
 - ✅ Professional documentation
 - ✅ Production-ready code quality
 
-**Status**: Ready for GitHub upload and portfolio showcase! 🚀
 
----
-
-*Last Updated: January 2024*  
-*Version: 1.0.0*  
-*License: MIT*
